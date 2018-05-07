@@ -6,11 +6,21 @@
 
     <mvc:annotation-driven/>
     <context:component-scan base-package="system"/>
-    <mvc:view-controller path="/" view-name="/"/>
+    <mvc:view-controller path="/" view-name="/items"/>
 
     <bean id="resolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+
+    <!-- Database Information -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/testspring"/>
+        <property name="username" value="admin"/>
+        <property name="password" value="gbnth2013"/>
+    </bean>
+
+
 
 </beans>

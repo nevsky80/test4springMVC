@@ -10,6 +10,7 @@
     <packaging>war</packaging>
 
     <dependencies>
+
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -37,26 +38,19 @@
             <version>5.0.5.RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>5.3.0.CR2</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.0.5.RELEASE</version>
         </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>5.3.0.CR2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>1.9.13</version>
-        </dependency>
+
         <!--MysQL-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.36</version>
         </dependency>
+
+
 
 
     </dependencies>

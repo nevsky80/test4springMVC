@@ -1,17 +1,37 @@
 package system.dao;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 import system.model.Item;
-import org.springframework.stereotype.Repository;
-import java.util.Arrays;
+
+import javax.sql.DataSource;
 import java.util.List;
 
-@Repository
+@Component("ItemDao")
 public class ItemDao implements ItemDaoI {
 
-    private List<Item> items=Arrays.asList(new Item(0,"name1"),new Item(1,"name2"));
+    private JdbcTemplate jdbcTemplate;
+
+    @Autowired
+    public void setDataSource(DataSource dataSource){
+
+        jdbcTemplate = new JdbcTemplate(dataSource);
+
+    }
+
+    public void insert(Item item) {
+
+        String sql="insert into main (name) VALUES(?)";
+        jdbcTemplate.update(sql,new Object[] {item.getName()});
+
+    }
 
     public List<Item> getAllItems(){
-        return items;
+
+        String sql="select * from main";
+        return null;
+
     }
 
 }
