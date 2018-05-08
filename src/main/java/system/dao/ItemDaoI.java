@@ -8,5 +8,6 @@ public interface ItemDaoI {
 
     public List<Item> getAllItems();
     public void insert(Item item);
+    public List<Item> getItemsByName(String name);
 
 }

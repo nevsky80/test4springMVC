@@ -6,8 +6,7 @@
     <title>Items</title>
 </head>
 <body>
-    HELLO
-    <br>
+
     <br>
     <h1>Items List</h1>
     <br>

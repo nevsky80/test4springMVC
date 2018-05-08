@@ -2,27 +2,44 @@ package system.model;
 
 public class Item {
 
-    private String Name;
+    private int id;
+    private String name;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
-
-        return Name;
-
+        return this.name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public Item(String name) {
-        Name = name;
+        this.name = name;
+    }
+
+    public Item(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Item() {
+        this.id = 0;
+        this.name = "";
     }
 
     @Override
     public String toString() {
         return "Item{" +
-                "Name='" + Name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 '}';
     }
-
 }

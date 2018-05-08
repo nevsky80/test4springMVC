@@ -21,6 +21,12 @@ public class MainService implements MainServiceI {
 
     }
 
+    public List getItemsByName(String name){
+
+        return itemDao.getItemsByName(name);
+
+    }
+
     public void insert(Item item) {
 
         //ApplicationContext context = new ClassPathXmlApplicationContext("../../WEB-INF/spring-config.xml");

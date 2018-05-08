@@ -1,14 +1,10 @@
 package system.controller;
 
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMethod;
-import system.dao.ItemDao;
 import system.model.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import system.service.MainService;
 import java.util.List;
 
@@ -27,6 +23,24 @@ public class MainController {
         mainService.insert(item);
 
         return "redirect:/";
+    }
+
+    @RequestMapping(value = "/getItemsByNameTest", method = RequestMethod.GET)
+    public String getItemsByName(){
+
+        List<Item> items = mainService.getItemsByName("Test");
+
+        return "redirect:/";
+
+    }
+
+    @RequestMapping(value = "/getAllItems", method = RequestMethod.GET)
+    public String getAllItems(){
+
+        List<Item> items = mainService.getAllItems();
+
+        return "redirect:/";
+
     }
 
 
