@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
 <html>
@@ -10,9 +10,8 @@
 
 
 
-<br>
 <h1>Items List</h1>
-<br>
+
 
 <form action="/" method="post">
     Find:
@@ -23,7 +22,7 @@
 <table border="1">
     <tr>
         <th width="80">ID</th>
-        <th width="120">NAME</th>>
+        <th width="120">NAME</th>
     </tr>
     <c:forEach items="${listJSP}" var="item">
         <tr>
