@@ -1,0 +1,9 @@
+CREATE DATABASE `testspring`;
+USE `testspring`;
+CREATE TABLE `main` (
+	`ID` INT NOT NULL AUTO_INCREMENT,
+	`NAME` VARCHAR(255) NOT NULL DEFAULT '0',
+	PRIMARY KEY (`ID`)
+)
+COLLATE='utf8_unicode_ci'
+;

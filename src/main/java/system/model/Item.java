@@ -6,7 +6,7 @@ public class Item {
     private String name;
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {
